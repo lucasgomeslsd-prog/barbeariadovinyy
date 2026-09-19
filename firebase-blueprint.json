@@ -1,0 +1,104 @@
+{
+  "entities": {
+    "appointments": {
+      "title": "Appointments",
+      "description": "Barbershop customer appointments",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "clientName": { "type": "string" },
+        "clientPhone": { "type": "string" },
+        "serviceId": { "type": "string" },
+        "serviceName": { "type": "string" },
+        "servicePrice": { "type": "number" },
+        "professionalId": { "type": "string" },
+        "professionalName": { "type": "string" },
+        "date": { "type": "string" },
+        "time": { "type": "string" },
+        "status": { "type": "string" },
+        "paymentStatus": { "type": "string" },
+        "paymentMethod": { "type": "string" },
+        "pixKey": { "type": "string" },
+        "depositAmount": { "type": "number" },
+        "depositPercentage": { "type": "number" },
+        "createdAt": { "type": "string" },
+        "notes": { "type": "string" }
+      },
+      "required": ["id", "clientName", "clientPhone", "date", "time", "status"]
+    },
+    "services": {
+      "title": "Services",
+      "description": "Barbershop services catalog",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "price": { "type": "number" },
+        "duration": { "type": "number" },
+        "description": { "type": "string" },
+        "category": { "type": "string" },
+        "popular": { "type": "boolean" },
+        "active": { "type": "boolean" }
+      },
+      "required": ["id", "name", "price"]
+    },
+    "professionals": {
+      "title": "Professionals",
+      "description": "Barbers and staff",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "role": { "type": "string" },
+        "specialty": { "type": "string" },
+        "status": { "type": "string" },
+        "rating": { "type": "number" },
+        "avatarUrl": { "type": "string" }
+      },
+      "required": ["id", "name"]
+    },
+    "config": {
+      "title": "BarbershopConfig",
+      "description": "Barbershop settings, PIX, schedule, availability",
+      "type": "object",
+      "properties": {
+        "barbershopName": { "type": "string" },
+        "phone": { "type": "string" },
+        "address": { "type": "string" },
+        "pixKey": { "type": "string" },
+        "pixKeyType": { "type": "string" },
+        "pixBeneficiary": { "type": "string" },
+        "pixCity": { "type": "string" },
+        "slotInterval": { "type": "number" }
+      }
+    }
+  },
+  "firestore": {
+    "collections": {
+      "appointments": {
+        "entity": "appointments",
+        "description": "Collection of appointments"
+      },
+      "services": {
+        "entity": "services",
+        "description": "Collection of barbershop services"
+      },
+      "professionals": {
+        "entity": "professionals",
+        "description": "Collection of barbershop professionals"
+      },
+      "config": {
+        "entity": "config",
+        "description": "Global barbershop settings"
+      },
+      "blockedSlots": {
+        "entity": "blockedSlots",
+        "description": "Blocked date and time slots"
+      },
+      "notifications": {
+        "entity": "notifications",
+        "description": "Admin notification records"
+      }
+    }
+  }
+}

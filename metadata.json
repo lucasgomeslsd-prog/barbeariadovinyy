@@ -1,0 +1,6 @@
+{
+  "name": "BARBEARIA DO VINICIUS",
+  "description": "Sistema de agendamento e administração simplificada para BARBEARIA DO VINICIUS com PIX e WhatsApp.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

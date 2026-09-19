@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+/* ======================================================== */
+/* ESTILO VISUAL BARBER POLE (AZUL, BRANCO E VERMELHO)     */
+/* ======================================================== */
+
+/* Fita clássica de listras diagonais do Barber Pole */
+.barber-pole-stripes {
+  background: repeating-linear-gradient(
+    -45deg,
+    #dc2626,
+    #dc2626 12px,
+    #ffffff 12px,
+    #ffffff 24px,
+    #2563eb 24px,
+    #2563eb 36px,
+    #ffffff 36px,
+    #ffffff 48px
+  );
+}
+
+.barber-pole-stripes-slim {
+  background: repeating-linear-gradient(
+    -45deg,
+    #dc2626,
+    #dc2626 8px,
+    #ffffff 8px,
+    #ffffff 16px,
+    #2563eb 16px,
+    #2563eb 24px,
+    #ffffff 24px,
+    #ffffff 32px
+  );
+}
+
+/* Borda decorativa tricolor */
+.barber-pole-border {
+  border-image: repeating-linear-gradient(
+    -45deg,
+    #dc2626 0,
+    #dc2626 10px,
+    #ffffff 10px,
+    #ffffff 20px,
+    #2563eb 20px,
+    #2563eb 30px,
+    #ffffff 30px,
+    #ffffff 40px
+  ) 1;
+}
+
+/* Efeito de brilho azul cobalto e vermelho rubi */
+.glow-barber-blue {
+  box-shadow: 0 0 25px -4px rgba(37, 99, 235, 0.4);
+}
+
+.glow-barber-red {
+  box-shadow: 0 0 25px -4px rgba(220, 38, 38, 0.4);
+}

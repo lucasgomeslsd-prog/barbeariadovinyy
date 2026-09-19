@@ -1,0 +1,44 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Agendamentos públicos: criação e consulta por clientes e administradores
+    match /appointments/{appointmentId} {
+      allow read, write: if true;
+    }
+
+    // Serviços disponíveis
+    match /services/{serviceId} {
+      allow read, write: if true;
+    }
+
+    // Profissionais e barbeiros
+    match /professionals/{professionalId} {
+      allow read, write: if true;
+    }
+
+    // Configurações e regras de negócio da barbearia
+    match /config/{configId} {
+      allow read, write: if true;
+    }
+
+    // Horários bloqueados
+    match /blockedSlots/{slotId} {
+      allow read, write: if true;
+    }
+
+    // Notificações administrativas
+    match /notifications/{notifId} {
+      allow read, write: if true;
+    }
+
+    // Documento de teste de conexão (verificação inicial de conectividade)
+    match /test/{docId} {
+      allow read, write: if true;
+    }
+
+    // Bloqueio padrão para outros documentos
+    match /{document=**} {
+      allow read, write: if true;
+    }
+  }
+}
